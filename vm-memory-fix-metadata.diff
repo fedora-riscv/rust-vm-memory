@@ -1,19 +1,19 @@
 diff --git a/Cargo.toml b/Cargo.toml
-index bfca230..c3007f5 100644
+index 6590ac2..da935b4 100644
 --- a/Cargo.toml
 +++ b/Cargo.toml
-@@ -21,6 +21,7 @@ readme = "README.md"
- keywords = ["memory"]
+@@ -22,6 +22,7 @@ keywords = ["memory"]
+ categories = ["memory-management"]
  license = "Apache-2.0 OR BSD-3-Clause"
  repository = "https://github.com/rust-vmm/vm-memory"
 +exclude = ["rust-vmm-ci/*", "/coverage_config_*", "benches/*"]
  [profile.bench]
  lto = true
  codegen-units = 1
-@@ -47,6 +48,3 @@ version = ">= 0.4.0"
- backend-atomic = ["arc-swap"]
+@@ -49,6 +50,3 @@ backend-atomic = ["arc-swap"]
+ backend-bitmap = []
  backend-mmap = []
  default = []
 -[target."cfg(windows)".dependencies.winapi]
 -version = ">=0.3"
--features = ["errhandlingapi"]
+-features = ["errhandlingapi", "sysinfoapi"]

@@ -9,7 +9,7 @@
 %global crate vm-memory
 
 Name:           rust-%{crate}
-Version:        0.5.0
+Version:        0.7.0
 Release:        2%{?dist}
 Summary:        Safe abstractions for accessing the VM physical memory
 
@@ -115,6 +115,9 @@ which use "backend-mmap" feature of "%{crate}" crate.
 %endif
 
 %changelog
+* Fri Dec 24 2021 Sergio Lopez <slp@redhat.com> - 0.7.0-1
+- Update to 0.7.0
+
 * Fri Jul 23 2021 Fedora Release Engineering <releng@fedoraproject.org> - 0.5.0-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_35_Mass_Rebuild
 
