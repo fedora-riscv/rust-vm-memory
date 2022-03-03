@@ -10,7 +10,7 @@
 
 Name:           rust-%{crate}
 Version:        0.7.0
-Release:        3%{?dist}
+Release:        4%{?dist}
 Summary:        Safe abstractions for accessing the VM physical memory
 
 # Upstream license specification: Apache-2.0 OR BSD-3-Clause
@@ -84,6 +84,18 @@ which use "backend-atomic" feature of "%{crate}" crate.
 %files       -n %{name}+backend-atomic-devel
 %ghost %{cargo_registry}/%{crate}-%{version_no_tilde}/Cargo.toml
 
+%package     -n %{name}+backend-bitmap-devel
+Summary:        %{summary}
+BuildArch:      noarch
+
+%description -n %{name}+backend-bitmap-devel %{_description}
+
+This package contains library source intended for building other packages
+which use the "backend-bitmap" feature of the "%{crate}" crate.
+
+%files       -n %{name}+backend-bitmap-devel
+%ghost %{cargo_registry}/%{crate}-%{version_no_tilde}/Cargo.toml
+
 %package     -n %{name}+backend-mmap-devel
 Summary:        %{summary}
 BuildArch:      noarch
@@ -115,6 +127,9 @@ which use "backend-mmap" feature of "%{crate}" crate.
 %endif
 
 %changelog
+* Thu Mar 03 2022 Sergio Lopez <slp@redhat.com> - 0.7.0-4
+- Add missing rust-vm-memory+backend-bitmap-devel subpackage
+
 * Fri Jan 21 2022 Fedora Release Engineering <releng@fedoraproject.org> - 0.7.0-3
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_36_Mass_Rebuild
 
