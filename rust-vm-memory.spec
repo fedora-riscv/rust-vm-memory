@@ -7,7 +7,7 @@
 
 Name:           rust-%{crate}
 Version:        0.8.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Safe abstractions for accessing the VM physical memory
 
 # Upstream license specification: Apache-2.0 OR BSD-3-Clause
@@ -126,6 +126,9 @@ which use "backend-mmap" feature of "%{crate}" crate.
 %endif
 
 %changelog
+* Sat Jul 23 2022 Fedora Release Engineering <releng@fedoraproject.org> - 0.8.0-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_37_Mass_Rebuild
+
 * Tue May 31 2022 Sergio Lopez <slp@redhat.com> - 0.8.0-1
 - Update to 0.8.0
 - Enable tests now that BZ#1902663 is fixed
