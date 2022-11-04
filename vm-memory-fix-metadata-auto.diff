@@ -1,0 +1,9 @@
+--- vm-memory-0.8.0/Cargo.toml	1970-01-01T00:00:00+00:00
++++ vm-memory-0.8.0/Cargo.toml	1970-01-01T00:00:00+00:00
+@@ -49,6 +49,3 @@
+ backend-bitmap = []
+ backend-mmap = []
+ default = []
+-[target."cfg(windows)".dependencies.winapi]
+-version = ">=0.3"
+-features = ["errhandlingapi", "sysinfoapi"]
