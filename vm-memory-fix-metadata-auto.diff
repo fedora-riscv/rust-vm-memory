@@ -1,9 +1,15 @@
---- vm-memory-0.8.0/Cargo.toml	1970-01-01T00:00:00+00:00
-+++ vm-memory-0.8.0/Cargo.toml	1970-01-01T00:00:00+00:00
-@@ -49,6 +49,3 @@
+diff --git a/Cargo.toml b/Cargo.toml
+index dd3e8ed..c0007bd 100644
+--- a/Cargo.toml
++++ b/Cargo.toml
+@@ -55,10 +55,3 @@ backend-atomic = ["arc-swap"]
  backend-bitmap = []
  backend-mmap = []
  default = []
+-
 -[target."cfg(windows)".dependencies.winapi]
--version = ">=0.3"
--features = ["errhandlingapi", "sysinfoapi"]
+-version = "0.3"
+-features = [
+-    "errhandlingapi",
+-    "sysinfoapi",
+-]

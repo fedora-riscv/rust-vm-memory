@@ -1,19 +1,22 @@
---- vm-memory-0.8.0/Cargo.toml	1970-01-01T00:00:00+00:00
-+++ vm-memory-0.8.0/Cargo.toml	2022-11-04T21:04:16.496637+00:00
-@@ -22,6 +22,7 @@
- categories = ["memory-management"]
+diff --git a/Cargo.toml b/Cargo.toml
+index c0007bd..d23a46e 100644
+--- a/Cargo.toml
++++ b/Cargo.toml
+@@ -22,6 +22,7 @@ categories = ["memory-management"]
  license = "Apache-2.0 OR BSD-3-Clause"
  repository = "https://github.com/rust-vmm/vm-memory"
+ resolver = "2"
 +exclude = ["rust-vmm-ci/*", "/coverage_config_*", "benches/*"]
- [profile.bench]
- lto = true
- codegen-units = 1
-@@ -35,8 +36,6 @@
  
+ [package.metadata.docs.rs]
+ all-features = true
+@@ -41,9 +42,6 @@ optional = true
  [dependencies.libc]
- version = ">=0.2.39"
+ version = "0.2.39"
+ 
 -[dev-dependencies.criterion]
 -version = "0.3.0"
- 
+-
  [dev-dependencies.matches]
- version = ">=0"
+ version = "0.1.0"
+ 
