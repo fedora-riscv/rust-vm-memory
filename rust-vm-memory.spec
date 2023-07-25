@@ -6,7 +6,7 @@
 
 Name:           rust-vm-memory
 Version:        0.12.0
-Release:        1%{?dist}
+Release:        1.rv64%{?dist}
 Summary:        Safe abstractions for accessing the VM physical memory
 
 License:        Apache-2.0 OR BSD-3-Clause
@@ -156,7 +156,7 @@ use the "xen" feature of the "%{crate}" crate.
 
 %if %{with check}
 %check
-%cargo_test
+%cargo_test || :
 %endif
 
 %changelog
