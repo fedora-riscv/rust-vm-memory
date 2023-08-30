@@ -1,8 +1,6 @@
-diff --git a/Cargo.toml b/Cargo.toml
-index 61384d8..d60fb39 100644
---- a/Cargo.toml
-+++ b/Cargo.toml
-@@ -21,6 +21,7 @@ keywords = ["memory"]
+--- vm-memory-0.12.2/Cargo.toml	1970-01-01T00:00:01+00:00
++++ vm-memory-0.12.2/Cargo.toml	2023-08-30T13:37:32.818256+00:00
+@@ -21,6 +21,7 @@
  categories = ["memory-management"]
  license = "Apache-2.0 OR BSD-3-Clause"
  repository = "https://github.com/rust-vmm/vm-memory"
@@ -10,7 +8,7 @@ index 61384d8..d60fb39 100644
  
  [package.metadata.docs.rs]
  all-features = true
-@@ -51,9 +52,6 @@ version = "1.0.40"
+@@ -51,9 +52,6 @@
  version = "0.11.0"
  optional = true
  
@@ -20,14 +18,3 @@ index 61384d8..d60fb39 100644
  [dev-dependencies.matches]
  version = "0.1.0"
  
-@@ -70,10 +68,3 @@ xen = [
-     "bitflags",
-     "vmm-sys-util",
- ]
--
--[target."cfg(windows)".dependencies.winapi]
--version = "0.3"
--features = [
--    "errhandlingapi",
--    "sysinfoapi",
--]

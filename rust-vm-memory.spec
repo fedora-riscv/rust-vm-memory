@@ -5,13 +5,15 @@
 %global crate vm-memory
 
 Name:           rust-vm-memory
-Version:        0.12.0
+Version:        0.12.2
 Release:        %autorelease
 Summary:        Safe abstractions for accessing the VM physical memory
 
 License:        Apache-2.0 OR BSD-3-Clause
 URL:            https://crates.io/crates/vm-memory
 Source:         %{crates_source}
+# Automatically generated patch to strip foreign dependencies
+Patch:          vm-memory-fix-metadata-auto.diff
 # Manually created patch for downstream crate metadata changes
 # * drop unused, benchmark-only criterion dev-dependency to speed up builds
 # * exclude files that are only useful for upstream development
